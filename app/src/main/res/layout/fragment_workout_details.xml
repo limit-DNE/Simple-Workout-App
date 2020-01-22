@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/workout_details_frame_layout"
+    android:background="@drawable/workout"
+    tools:context=".WorkoutDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/workout_details_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/workout_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/workout_description_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="@id/workout_name_textview"
+            app:layout_constraintStart_toStartOf="@id/workout_name_textview"
+            app:layout_constraintTop_toBottomOf="@id/workout_name_textview" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_framelayout_forstopwatch"
+            app:layout_constraintTop_toBottomOf="@+id/workout_description_textview"
+            app:layout_constraintStart_toStartOf="@id/workout_description_textview"
+            app:layout_constraintEnd_toEndOf="@id/workout_description_textview"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
